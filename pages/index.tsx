@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Hi, I'm Richard Li</title>
+        <title>Hi, I&#x27;m Richard Li</title>
         <meta name="description" content="Welcome to my website!" />
         {/* <link rel="icon" href="/test.png" /> */}
       </Head>
