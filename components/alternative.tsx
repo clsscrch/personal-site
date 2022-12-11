@@ -12,20 +12,12 @@ const HomeProps = {}
 export default function Home2(props: any): JSX.Element {
     const [darkMode, setDarkMode] = useState(false)
     return (
-        // <main className='px-56 min-h-screen bg-amber-100 dark:bg-slate-800 '>
-        //     {/* <Navbar /> */}
-        //     <section className='flex flex-col justify-center items-center py-2'>
-        //         <Image src='/me.png' width={500} height={500} className='rounded-full h-56 w-56' alt='A picture of me, Richard Li, in a red flannel in front of a brick wall' />
-        //         <h1 className='text-5xl font-bold pt-2'>Hi, I'm Richard</h1>
-        //         <h2 className='text-2xl font-bold'>I'm a software engineer</h2>
-        //     </section>
-        // </main>
         <>
             {/* <Navbar /> */}
             <section className='flex flex-col justify-center items-center py-2'>
                 <Image priority src='/me.png' width={500} height={500} className='rounded-full h-56 w-56' alt='A picture of me, Richard Li, in a red flannel in front of a brick wall' />
-                <h1 className='text-5xl font-bold pt-2'>Hi, I'm Richard</h1>
-                <h2 className='text-2xl font-bold'>I'm a software engineer</h2>
+                <h1 className='text-5xl font-bold pt-2'>Hi, I&#x27;m Richard</h1>
+                <h2 className='text-2xl font-bold'>I&#x27;m a software engineer</h2>
 
             </section>
             <section className='flex justify-center items-center space-x-10'>
