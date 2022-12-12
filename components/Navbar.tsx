@@ -27,7 +27,7 @@ export default function Navbar(props: any): JSX.Element {
     return (
         <nav className='flex justify-between py-4 items-center sm:px-12 md:px-24'>
             <h1 className=''>{' '}</h1>
-            <ul className='flex items-center space-x-6 sm:space-x-12 md:ml-14'>
+            <ul className='flex items-center space-x-4 ml-12 sm:space-x-8 md:ml-14'>
                 <li>
                     {/* Home */}
 
@@ -68,7 +68,7 @@ export default function Navbar(props: any): JSX.Element {
                     }
                 </li>
             </ul>
-            <MoonIcon className='h-4 w-4 cursor-pointer mr-6' />
+            <MoonIcon className='h-4 w-4 cursor-pointer mr-4' />
         </nav>
     )
 }
