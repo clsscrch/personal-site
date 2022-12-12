@@ -15,7 +15,7 @@ export default function Home2(props: any): JSX.Element {
         <>
             {/* <Navbar /> */}
             <section className='flex flex-col justify-center items-center py-2'>
-                <Image priority src='/me.png' width={500} height={500} className='rounded-full h-56 w-56' alt='A picture of me, Richard Li, in a red flannel in front of a brick wall' />
+                <Image priority src='/me.png' width={500} height={500} className='rounded-full h-28 w-28 md:h-56 md:w-56' alt='A picture of me, Richard Li, in a red flannel in front of a brick wall' />
                 <h1 className='text-5xl font-bold pt-2'>Hi, I&#x27;m Richard</h1>
                 <h2 className='text-2xl font-bold'>I&#x27;m a software engineer</h2>
 
