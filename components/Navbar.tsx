@@ -6,23 +6,7 @@ import { useRouter } from "next/router";
 export default function Navbar(props: any): JSX.Element {
 
     const router = useRouter()
-
-    // const [location, setLocation] = useState(router.pathname)
-
-    // let spanCSS = location === '/' ? 'block max-w-full duration-500 h-0.5 bg-slate-700' : 'group text-slate-700 transition duration-200 hover:text-slate-700 font-bold'
-
     let currentLocation = router.pathname
-
-    // useEffect(() => {
-
-    //     setLocation(currentLocation)
-    //     console.log(location)
-
-    // }, [])
-
-    // console.log(location)
-
-
 
     return (
         <nav className='flex justify-between py-4 items-center sm:px-12 md:px-24'>
@@ -30,7 +14,6 @@ export default function Navbar(props: any): JSX.Element {
             <ul className='flex items-center space-x-4 ml-12 sm:space-x-8 md:ml-14'>
                 <li>
                     {/* Home */}
-
                     {currentLocation === '/' ?
                         <Link href="/" className="text-slate-700 hover:text-slate-700 font-bold">
                             Home
