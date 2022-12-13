@@ -15,7 +15,6 @@ export default function Home() {
       <Head>
         <title>Hi, I&#x27;m Richard Li</title>
         <meta name="description" content="Welcome to my website!" />
-        {/* <link rel="icon" href="/test.png" /> */}
       </Head>
 
       <section className='flex flex-col justify-center items-center py-2'>
@@ -28,7 +27,6 @@ export default function Home() {
         <a href='https://github.com/clsscrch' target='_blank' rel='noopener noreferrer'><Icon icon="logos:github-icon" width={26} height={26} className='cursor-pointer' /></a>
         <a href='https://www.linkedin.com/in/richard-li-b204aa16b/' target='_blank' rel='noopener noreferrer'><Icon icon="mdi:linkedin" width={32} height={32} /></a>
       </section>
-
 
     </div >
   )
