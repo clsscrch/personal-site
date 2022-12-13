@@ -8,7 +8,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <main className='min-h-screen bg-beige'>
         <Navbar />
-        <div className='px-24'>
+        <div className='px-4 sm:px-24'>
           <Component {...pageProps} />
         </div>
       </main>
