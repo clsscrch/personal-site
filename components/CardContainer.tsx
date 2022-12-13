@@ -1,8 +1,17 @@
-export default function CardContainer({ children }: any): JSX.Element {
+interface CardContainerProps {
+    children: JSX.Element[],
+    title: string
+}
+
+export default function CardContainer({ children, title }: CardContainerProps): JSX.Element {
     return (
-        // <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 p-4">
-        <div className="flex flex-wrap justify-center gap-3">
-            {children}
-        </div>
+        <>
+            <h2 className='text-2xl md:text-3xl font-bold pt-2'>
+                {title}
+            </h2>
+            <div className="flex flex-wrap justify-center gap-3 mt-4">
+                {children}
+            </div>
+        </>
     )
 }
