@@ -4,7 +4,7 @@ import { MoonIcon } from '@heroicons/react/24/solid'
 import { Icon } from '@iconify/react';
 import { useRouter } from 'next/router'
 import { useState } from 'react';
-import ToolTippedIcon from '../components/ToolToppedIcon';
+import ToolTippedIcon from '../components/ToolTippedIcon';
 import { SiNextdotjs, SiReact, SiTailwindcss, SiTypescript } from "react-icons/si";
 
 export default function Home() {
