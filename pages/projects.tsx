@@ -1,7 +1,7 @@
 import Card from "../components/Card";
 import Head from "next/head";
 import CardContainer from "../components/CardContainer";
-import { SiNextdotjs, SiReact } from "react-icons/si";
+import { SiCss3, SiHtml5, SiJavascript, SiNextdotjs, SiReact, SiTailwindcss } from "react-icons/si";
 
 export default function Projects() {
     return (
@@ -22,10 +22,10 @@ export default function Projects() {
                 </CardContainer>
 
                 <CardContainer title="Personal Projects">
-                    <Card title="Equity Curve Simulator" link="https://equity-curve-simulator.vercel.app/" iconList={[{ icon: <SiNextdotjs />, tooltip: 'Next.js' }, { icon: <SiReact />, tooltip: 'React' }]}>
+                    <Card title="Equity Curve Simulator" link="https://equity-curve-simulator.vercel.app/" iconList={[{ icon: <SiNextdotjs />, tooltip: 'Next.js' }, { icon: <SiReact />, tooltip: 'React' }, { icon: <SiTailwindcss />, tooltip: 'TailwindCSS' }]}>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
                     </Card>
-                    <Card title="Price Per Wing" link="https://priceperwing.vercel.app/">
+                    <Card title="Price Per Wing" link="https://priceperwing.vercel.app/" iconList={[{ icon: <SiHtml5 />, tooltip: 'HTML' }, { icon: <SiCss3 />, tooltip: 'CSS' }, { icon: <SiJavascript />, tooltip: 'JavaScript' }]}>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
                     </Card>
                 </CardContainer>
