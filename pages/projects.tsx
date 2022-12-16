@@ -1,6 +1,7 @@
 import Card from "../components/Card";
 import Head from "next/head";
 import CardContainer from "../components/CardContainer";
+import { SiNextdotjs, SiReact } from "react-icons/si";
 
 export default function Projects() {
     return (
@@ -21,7 +22,7 @@ export default function Projects() {
                 </CardContainer>
 
                 <CardContainer title="Personal Projects">
-                    <Card title="Equity Curve Simulator" link="https://equity-curve-simulator.vercel.app/">
+                    <Card title="Equity Curve Simulator" link="https://equity-curve-simulator.vercel.app/" iconList={[{ icon: <SiNextdotjs />, tooltip: 'Next.js' }, { icon: <SiReact />, tooltip: 'React' }]}>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
                     </Card>
                     <Card title="Price Per Wing" link="https://priceperwing.vercel.app/">
