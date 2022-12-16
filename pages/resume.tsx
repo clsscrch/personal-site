@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
 import { CgSpinner } from "react-icons/cg";
+import { FiDownload } from "react-icons/fi";
 // import workerSrc from "../pdf-worker";
 import Link from "next/link";
 import Head from "next/head";
@@ -19,33 +20,10 @@ const LoadingSpinner: React.FC = () => {
 
 export default function Resume() {
     const [numPages, setNumPages] = useState(1);
-    // const [width, setWidth] = useState(NaN);
-    // const [height, setHeight] = useState(NaN);
-    // const [scale, setScale] = useState(0.65);
-
-    // const getScale = (): number => {
-    //     return width < 768 ? 0.3 : 0.65;
-    // }
-
-    // useEffect(() => {
-    //     function handleResize() {
-    //         setWidth(window.innerWidth);
-    //         setHeight(window.innerHeight);
-    //         setScale(getScale());
-    //     }
-
-    //     window.addEventListener('resize', handleResize);
-    //     console.log('width', width)
-
-    //     return () => window.removeEventListener('resize', handleResize);
-    // }, []);
 
     function onDocumentLoadSuccess({ numPages: nextNumPages }: any) {
         setNumPages(nextNumPages);
     }
-
-
-
 
     return (
         <>
@@ -61,9 +39,10 @@ export default function Resume() {
                         <Page pageNumber={1} scale={0.6} renderTextLayer={false} renderAnnotationLayer={false} renderMode={'svg'} className='border border-black' loading={<LoadingSpinner />} />
                     </Document>
                 </div>
-                <button className="bg-slate-700 text-white p-2 rounded-md mt-4 mb-8">
-                    <Link href={'/Resume Jan 2022.pdf'} download target="_blank" rel="noopener noreferrer">
-                        Download Resume
+                <button className="bg-slate-700 text-white p-2 rounded-md mt-4 ">
+                    <Link href={'/Resume Jan 2022.pdf'} download target="_blank" rel="noopener noreferrer" className="flex items-center">
+                        <FiDownload />
+                        <p className="ml-2 text-lg">Download Resume</p>
                     </Link>
                 </button>
             </section>
