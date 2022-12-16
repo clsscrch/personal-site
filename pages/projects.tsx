@@ -1,4 +1,3 @@
-import Navbar from "../components/Navbar";
 import Card from "../components/Card";
 import Head from "next/head";
 import CardContainer from "../components/CardContainer";
@@ -22,10 +21,10 @@ export default function Projects() {
                 </CardContainer>
 
                 <CardContainer title="Personal Projects">
-                    <Card title="Indeed Job Data Analyzer">
+                    <Card title="Equity Curve Simulator" link="https://equity-curve-simulator.vercel.app/">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
                     </Card>
-                    <Card title="Price Per Wing">
+                    <Card title="Price Per Wing" link="https://priceperwing.vercel.app/">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
                     </Card>
                 </CardContainer>
