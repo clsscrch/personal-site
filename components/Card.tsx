@@ -36,8 +36,8 @@ export default function Card({ title, link, iconList, children }: CardProps): JS
 
                         <p className='text-sm font-bold pb-3'>Built With</p>
                         <ul className='flex items-center space-x-6'>
-                            {iconList.map((icon) => {
-                                return <ToolTippedIcon icon={icon.icon} tooltip={icon.tooltip} />
+                            {iconList.map((icon, index) => {
+                                return <ToolTippedIcon key={index} icon={icon.icon} tooltip={icon.tooltip} />
                             })}
 
 
