@@ -19,7 +19,7 @@ interface IconListType {
 
 export default function Card({ title, link, iconList, children }: CardProps): JSX.Element {
     return (
-        <div className="rounded-md border w-60 h-64 sm:w-80 sm:h-64 p-4 border-gray-900 relative">
+        <div className="rounded-md border w-60 h-64 sm:w-96 sm:h-64 p-4 border-gray-900 relative">
             <div className="flex justify-between pb-2">
                 <h1 className="text-xl">{title}</h1>
                 {link ? <Link href={link} rel="noopener noreferrer" target="_blank"><ArrowTopRightOnSquareIcon className="h-5 w-5 cursor-pointer" /></Link> : <> </>}
@@ -34,15 +34,12 @@ export default function Card({ title, link, iconList, children }: CardProps): JS
                 <div className="flex items-center justify-center">
                     <section className='flex flex-col justify-center items-center absolute bottom-4'>
 
-                        <p className='text-sm font-bold pb-3'>Built With</p>
+                        <p className='text-xs font-bold pb-3'>Built With</p>
                         <ul className='flex items-center space-x-6'>
                             {iconList.map((icon, index) => {
                                 return <ToolTippedIcon key={index} icon={icon.icon} tooltip={icon.tooltip} />
                             })}
-
-
                         </ul>
-
                     </section>
                 </div>
                 :
