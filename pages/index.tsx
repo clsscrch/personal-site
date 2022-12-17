@@ -5,7 +5,8 @@ import { Icon } from '@iconify/react';
 import { useRouter } from 'next/router'
 import { useState } from 'react';
 import ToolTippedIcon from '../components/ToolTippedIcon';
-import { SiNextdotjs, SiReact, SiTailwindcss, SiTypescript } from "react-icons/si";
+import { SiGithub, SiLinkedin, SiNextdotjs, SiReact, SiTailwindcss, SiTypescript } from "react-icons/si";
+import Link from 'next/link';
 
 export default function Home() {
 
@@ -27,8 +28,8 @@ export default function Home() {
 
       {/* Change icons to react icons and change to link tags */}
       <section className='flex justify-center items-center space-x-10 dark:text-stone-300' >
-        <a href='https://github.com/clsscrch' target='_blank' rel='noopener noreferrer'><Icon icon="logos:github-icon" width={26} height={26} className='cursor-pointer' /></a>
-        <a href='https://www.linkedin.com/in/richard-li-b204aa16b/' target='_blank' rel='noopener noreferrer'><Icon icon="mdi:linkedin" width={32} height={32} /></a>
+        <Link href='https://github.com/clsscrch' target='_blank' rel='noopener noreferrer'><SiGithub size={24} className='cursor-pointer' /> </Link>
+        <Link href='https://www.linkedin.com/in/richard-li-b204aa16b/' target='_blank' rel='noopener noreferrer'><SiLinkedin size={24} className='cursor-pointer' /></Link>
       </section>
 
       <section className='flex flex-col justify-center items-center pt-12'>
