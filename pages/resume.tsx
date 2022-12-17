@@ -4,6 +4,7 @@ import { CgSpinner } from "react-icons/cg";
 import { FiDownload } from "react-icons/fi";
 import Link from "next/link";
 import Head from "next/head";
+import { Analytics } from '@vercel/analytics/react';
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
 
@@ -44,6 +45,7 @@ export default function Resume() {
                     </Link>
                 </button>
             </section>
+            <Analytics />
         </>
     )
 }
