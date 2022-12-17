@@ -1,11 +1,26 @@
 import { MoonIcon } from "@heroicons/react/24/solid";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { HiMoon, HiSun } from "react-icons/hi";
 
-export default function Navbar(props: any): JSX.Element {
+interface NavbarProps {
+    theme: string;
+    setTheme: (theme: string) => void;
+}
+
+export default function Navbar({ theme, setTheme }: NavbarProps): JSX.Element {
 
     const router = useRouter()
     let currentLocation = router.pathname
+
+    const toggleTheme = () => {
+        if (theme === 'dark') {
+            setTheme('')
+        } else {
+            setTheme('dark')
+        }
+    }
 
     return (
         <nav className='flex justify-between py-4 items-center sm:px-12 md:px-24'>
@@ -14,43 +29,45 @@ export default function Navbar(props: any): JSX.Element {
                 <li>
                     {/* Home */}
                     {currentLocation === '/' ?
-                        <Link href="/" className="text-slate-700 hover:text-slate-700 font-bold">
+                        <Link href="/" className="nav-link">
                             Home
-                            <span className="block max-w-full duration-500 h-0.5 bg-slate-700"></span>
+                            <span className="nav-span max-w-full"></span>
                         </Link> :
-                        <Link href="/" className="group text-slate-700 transition duration-200 hover:text-slate-700 font-bold">
+                        <Link href="/" className="nav-link group transition duration-200">
                             Home
-                            <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 group-hover:bg-slate-700"></span>
+                            <span className="nav-span max-w-0 group-hover:max-w-full transition-all"></span>
                         </Link>}
                 </li>
                 <li>
                     {/* Projects */}
                     {currentLocation === '/projects' ?
-                        <Link href="/projects" className="text-slate-700 hover:text-slate-700 font-bold">
+                        <Link href="/projects" className="nav-link">
                             Projects
-                            <span className="block max-w-full duration-500 h-0.5 bg-slate-700"></span>
+                            <span className="nav-span max-w-full"></span>
                         </Link> :
-                        <Link href="/projects" className="group text-slate-700 transition duration-200 hover:text-slate-700 font-bold">
+                        <Link href="/projects" className="nav-link group transition duration-200">
                             Projects
-                            <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 group-hover:bg-slate-700"></span>
+                            <span className="nav-span max-w-0 group-hover:max-w-full transition-all"></span>
                         </Link>}
 
                 </li>
                 <li>
                     {/* Resume */}
                     {currentLocation === '/resume' ?
-                        <Link href="/resume" className="text-slate-700 hover:text-slate-700 font-bold">
+                        <Link href="/resume" className="nav-link">
                             Resume
-                            <span className="block max-w-full duration-500 h-0.5 bg-slate-700"></span>
+                            <span className="nav-span max-w-full"></span>
                         </Link> :
-                        <Link href="/resume" className="group text-slate-700 transition duration-200 hover:text-slate-700 font-bold">
+                        <Link href="/resume" className="nav-link group transition duration-200">
                             Resume
-                            <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 group-hover:bg-slate-700"></span>
+                            <span className="nav-span max-w-0 group-hover:max-w-full transition-all"></span>
                         </Link>
                     }
                 </li>
             </ul>
-            <MoonIcon className='h-4 w-4 cursor-pointer mr-4' />
+            {theme === 'dark' ? <HiSun size={20} className=' cursor-pointer mr-4 text-stone-300' onClick={toggleTheme} /> : <HiMoon size={20} className=' cursor-pointer mr-4' onClick={toggleTheme} />}
+
+
         </nav>
     )
 }
