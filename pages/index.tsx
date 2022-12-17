@@ -1,12 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { MoonIcon } from '@heroicons/react/24/solid'
-import { Icon } from '@iconify/react';
-import { useRouter } from 'next/router'
-import { useState } from 'react';
 import ToolTippedIcon from '../components/ToolTippedIcon';
 import { SiGithub, SiLinkedin, SiNextdotjs, SiReact, SiTailwindcss, SiTypescript } from "react-icons/si";
 import Link from 'next/link';
+import { IoMail } from 'react-icons/io5';
 
 export default function Home() {
 
@@ -29,6 +26,7 @@ export default function Home() {
       <section className='flex justify-center items-center space-x-10 dark:text-stone-300' >
         <Link href='https://github.com/clsscrch' target='_blank' rel='noopener noreferrer'><SiGithub size={24} className='cursor-pointer' /> </Link>
         <Link href='https://www.linkedin.com/in/richard-li-b204aa16b/' target='_blank' rel='noopener noreferrer'><SiLinkedin size={24} className='cursor-pointer' /></Link>
+        <Link href={'mailto: rl628@drexel.edu'}><IoMail size={28} /></Link>
       </section>
 
       <section className='flex flex-col justify-center items-center pt-12'>

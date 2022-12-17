@@ -1,12 +1,10 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
 import { CgSpinner } from "react-icons/cg";
 import { FiDownload } from "react-icons/fi";
-// import workerSrc from "../pdf-worker";
 import Link from "next/link";
 import Head from "next/head";
 
-// pdfjs.GlobalWorkerOptions.workerSrc = workerSrc;
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
 
 const LoadingSpinner: React.FC = () => {

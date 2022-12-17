@@ -1,8 +1,6 @@
-import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid"
 import Link from "next/link"
-import { IconType } from "react-icons/lib"
-import { SiNextdotjs } from "react-icons/si"
 import ToolTippedIcon from "./ToolTippedIcon"
+import { BsBoxArrowUpRight } from "react-icons/bs"
 
 export interface CardProps {
     children: string,
@@ -20,9 +18,9 @@ interface IconListType {
 export default function Card({ title, link, iconList, children }: CardProps): JSX.Element {
     return (
         <div className="rounded-md border w-80 h-72 sm:w-96 sm:h-64 p-4 border-gray-900 relative dark:border-stone-300">
-            <div className="flex justify-between pb-2">
+            <div className="flex justify-between pb-2 items-center">
                 <h1 className="text-xl">{title}</h1>
-                {link ? <Link href={link} rel="noopener noreferrer" target="_blank"><ArrowTopRightOnSquareIcon className="h-5 w-5 cursor-pointer" /></Link> : <> </>}
+                {link ? <Link href={link} rel="noopener noreferrer" target="_blank" className="pb-2"><BsBoxArrowUpRight className="cursor-pointer" size={18} /></Link> : <> </>}
 
             </div>
             <hr className="border-gray-500 rounded-sm " />
