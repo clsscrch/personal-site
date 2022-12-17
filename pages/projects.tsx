@@ -11,7 +11,7 @@ export default function Projects() {
                 <meta name="description" content="My projects consisting of professional, personal, and educational " />
             </Head>
 
-            <section className='flex flex-col justify-center items-center pb-6'>
+            <section className='flex flex-col justify-center items-center pb-6 dark:text-stone-300'>
                 <CardContainer title="Professional Projects">
                     <Card title="Pathways" iconList={[{ icon: <SiReact />, tooltip: 'React' }, { icon: <SiAntdesign />, tooltip: 'Ant Design' }, { icon: <SiTailwindcss />, tooltip: 'TailwindCSS' },
                     { icon: <SiGraphql />, tooltip: 'GraphQL' }, { icon: <SiMongodb />, tooltip: 'MongoDB' }, { icon: <SiTypescript />, tooltip: 'TypeScript' }]}>

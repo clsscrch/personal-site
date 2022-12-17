@@ -19,7 +19,7 @@ interface IconListType {
 
 export default function Card({ title, link, iconList, children }: CardProps): JSX.Element {
     return (
-        <div className="rounded-md border w-80 h-72 sm:w-96 sm:h-64 p-4 border-gray-900 relative">
+        <div className="rounded-md border w-80 h-72 sm:w-96 sm:h-64 p-4 border-gray-900 relative dark:border-stone-300">
             <div className="flex justify-between pb-2">
                 <h1 className="text-xl">{title}</h1>
                 {link ? <Link href={link} rel="noopener noreferrer" target="_blank"><ArrowTopRightOnSquareIcon className="h-5 w-5 cursor-pointer" /></Link> : <> </>}

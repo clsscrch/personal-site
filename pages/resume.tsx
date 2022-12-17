@@ -32,7 +32,7 @@ export default function Resume() {
                 <meta name="description" content="Richard's Resume" />
             </Head>
 
-            <section className='flex flex-col justify-center items-center py-2 max-h-full'>
+            <section className='flex flex-col justify-center items-center py-2 max-h-full dark:text-stone-300'>
                 <p className="text-sm italic text-end md:ml-56">Last Updated on: 01/2022</p>
                 <div>
                     <Document file='/Resume Jan 2022.pdf' onLoadSuccess={onDocumentLoadSuccess} loading={<LoadingSpinner />}>
