@@ -1,7 +1,8 @@
 import Card from "../components/Card";
 import Head from "next/head";
 import CardContainer from "../components/CardContainer";
-import { SiCss3, SiHtml5, SiJavascript, SiNextdotjs, SiReact, SiTailwindcss, SiAntdesign, SiGraphql, SiMongodb, SiTypescript } from "react-icons/si";
+import { SiCss3, SiHtml5, SiJavascript, SiNextdotjs, SiReact, SiTailwindcss, SiAntdesign, SiGraphql, SiMongodb, SiTypescript, SiPython, SiPostgresql, SiPrisma } from "react-icons/si";
+import { IoFlowerOutline } from "react-icons/io5";
 
 export default function Projects() {
     return (
@@ -24,7 +25,7 @@ export default function Projects() {
                 </CardContainer>
 
                 <CardContainer title="Personal Projects">
-                    <Card title="Equity Curve Simulator" link="https://equity-curve-simulator.vercel.app/" iconList={[{ icon: <SiNextdotjs />, tooltip: 'Next.js' }, { icon: <SiReact />, tooltip: 'React' }, { icon: <SiTailwindcss />, tooltip: 'TailwindCSS' }]}>
+                    <Card title="Equity Curve Simulator" link="https://equity-curve-simulator.vercel.app/" iconList={[{ icon: <SiNextdotjs />, tooltip: 'Next.js' }, { icon: <SiReact />, tooltip: 'React' }, { icon: <SiTailwindcss />, tooltip: 'TailwindCSS' }, { icon: <IoFlowerOutline />, tooltip: 'DaisyUI' }]}>
                         A web app that simulates an equity curve based on the Monte Carlo method to determine the risk of a stock trade. Built with two of my friends.
                     </Card>
                     <Card title="Price Per Wing" link="https://priceperwing.vercel.app/" iconList={[{ icon: <SiHtml5 />, tooltip: 'HTML' }, { icon: <SiCss3 />, tooltip: 'CSS' }, { icon: <SiJavascript />, tooltip: 'JavaScript' }]}>
@@ -32,14 +33,14 @@ export default function Projects() {
                     </Card>
                 </CardContainer>
 
-                {/* <CardContainer title="School/Educational Projects">
-                    <Card title="Canny Edge Detector" >
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
+                <CardContainer title="School/Educational Projects">
+                    <Card title="Indeed Job Data Analyzer" iconList={[{ icon: <SiNextdotjs />, tooltip: 'Next.js' }, { icon: <SiReact />, tooltip: 'React' }, { icon: <SiAntdesign />, tooltip: 'Ant Design' }, { icon: <SiPostgresql />, tooltip: 'PostgreSQL' }, { icon: <SiPrisma />, tooltip: 'Prisma' }, { icon: <SiPython />, tooltip: 'Python' }]}>
+                        A web app that analyzes job data from Indeed.com through scraping and other APIs. Built with a team of 6 for Senior Design.
                     </Card>
-                    <Card title="Owner Community" >
+                    {/* <Card title="Owner Community" >
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
-                    </Card>
-                </CardContainer> */}
+                    </Card> */}
+                </CardContainer>
 
             </section>
         </>

@@ -1,5 +1,5 @@
 interface CardContainerProps {
-    children: JSX.Element[],
+    children: JSX.Element | JSX.Element[],
     title: string
 }
 
