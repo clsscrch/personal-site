@@ -32,7 +32,7 @@ export default function Resume() {
             </Head>
 
             <section className='flex flex-col justify-center items-center py-2 max-h-full dark:text-stone-300'>
-                <p className="text-sm italic text-end md:ml-56">Last Updated on: 01/2022</p>
+                <p className="text-sm italic text-end md:ml-56">Last Updated on: 12/2022</p>
                 <div>
                     <Document file='/Resume December 2022.pdf' onLoadSuccess={onDocumentLoadSuccess} loading={<LoadingSpinner />}>
                         <Page pageNumber={1} scale={0.6} renderTextLayer={false} renderAnnotationLayer={false} renderMode={'svg'} className='border border-black' loading={<LoadingSpinner />} />
