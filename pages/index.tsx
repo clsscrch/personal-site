@@ -14,7 +14,7 @@ export default function Home() {
       <Head>
         <title>Hi, I&#x27;m Richard Li</title>
         <meta name="description" content="Welcome to my website!" />
-        <Link rel="apple-touch-icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/favicon.ico" />
       </Head>
 
       <section className='flex flex-col justify-center items-center py-2'>
