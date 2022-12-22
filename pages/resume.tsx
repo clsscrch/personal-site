@@ -39,7 +39,7 @@ export default function Resume() {
                     </Document>
                 </div>
                 <button className="bg-slate-700 text-white p-2 rounded-md mt-4 ">
-                    <Link href={'/Resume Jan 2022.pdf'} download target="_blank" rel="noopener noreferrer" className="flex items-center">
+                    <Link href={'/Resume December 2022.pdf'} download target="_blank" rel="noopener noreferrer" className="flex items-center">
                         <FiDownload />
                         <p className="ml-2 text-lg">Download Resume</p>
                     </Link>
