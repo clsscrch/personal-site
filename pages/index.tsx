@@ -25,7 +25,7 @@ export default function Home() {
 
 
       <section className='flex justify-center items-center space-x-10 dark:text-stone-300' >
-        <Link href='https://github.com/clsscrch' target='_blank' rel='noopener noreferrer'><SiGithub size={24} className='cursor-pointer' /> </Link>
+        <Link href='https://github.com/clsscrch' target='_blank' rel='noopener noreferrer' aria-label='Visit my Github'><SiGithub size={24} className='cursor-pointer' /> </Link>
         <Link href='https://www.linkedin.com/in/richard-li-b204aa16b/' target='_blank' rel='noopener noreferrer'><SiLinkedin size={24} className='cursor-pointer' /></Link>
         <Link href={'mailto: rl628@drexel.edu'}><IoMail size={28} /></Link>
       </section>
