@@ -26,17 +26,17 @@ export default function Home() {
 
       <section className='flex justify-center items-center space-x-10 dark:text-stone-300' >
         <Link href='https://github.com/clsscrch' target='_blank' rel='noopener noreferrer' aria-label='Visit my Github'><SiGithub size={24} className='cursor-pointer' /> </Link>
-        <Link href='https://www.linkedin.com/in/richard-li-b204aa16b/' target='_blank' rel='noopener noreferrer'><SiLinkedin size={24} className='cursor-pointer' /></Link>
-        <Link href={'mailto: rl628@drexel.edu'}><IoMail size={28} /></Link>
+        <Link href='https://www.linkedin.com/in/richard-li-b204aa16b/' target='_blank' rel='noopener noreferrer' aria-label='Visit my LinkedIn'><SiLinkedin size={24} className='cursor-pointer' /></Link>
+        <Link href={'mailto: rl628@drexel.edu'} aria-label='Send me an email'><IoMail size={28} /></Link>
       </section>
 
       <section className='flex flex-col justify-center items-center pt-12'>
         <p className='text-xl font-bold pb-3 dark:text-stone-300'>Built With</p>
         <ul className='flex items-center space-x-6 dark:text-stone-300'>
-          <ToolTippedIcon icon={<SiNextdotjs />} tooltip={'Next.js'} />
-          <ToolTippedIcon icon={<SiReact />} tooltip={'React'} />
-          <ToolTippedIcon icon={<SiTypescript />} tooltip={'TypeScript'} />
-          <ToolTippedIcon icon={<SiTailwindcss />} tooltip={'TailwindCSS'} />
+          <li><ToolTippedIcon icon={<SiNextdotjs />} tooltip={'Next.js'} /></li>
+          <li><ToolTippedIcon icon={<SiReact />} tooltip={'React'} /></li>
+          <li><ToolTippedIcon icon={<SiTypescript />} tooltip={'TypeScript'} /></li>
+          <li><ToolTippedIcon icon={<SiTailwindcss />} tooltip={'TailwindCSS'} /></li>
         </ul>
 
       </section>
