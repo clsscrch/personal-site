@@ -13,7 +13,7 @@ export default function Home() {
     <div>
       <Head>
         <title>Hi, I&#x27;m Richard Li</title>
-        <meta name="description" content="Welcome to my website!" />
+        <meta name="description" content="Welcome to my website! This is a personal site to act as a landing page to display my work and projects" />
         <link rel="apple-touch-icon" href="/favicon.ico" />
       </Head>
 
