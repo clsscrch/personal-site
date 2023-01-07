@@ -24,6 +24,8 @@ export default function Resume() {
         setNumPages(nextNumPages);
     }
 
+    const resumePath = '/Richard Li Resume January 2023.pdf';
+
     return (
         <>
             <Head>
@@ -32,14 +34,14 @@ export default function Resume() {
             </Head>
 
             <section className='flex flex-col justify-center items-center py-2 max-h-full dark:text-stone-300'>
-                <p className="text-sm italic text-end md:ml-56">Last Updated on: 12/2022</p>
+                <p className="text-sm italic text-end md:ml-56">Last Updated on: 01/2023</p>
                 <div>
-                    <Document file='/Resume December 2022.pdf' onLoadSuccess={onDocumentLoadSuccess} loading={<LoadingSpinner />}>
+                    <Document file={resumePath} onLoadSuccess={onDocumentLoadSuccess} loading={<LoadingSpinner />}>
                         <Page pageNumber={1} scale={0.6} renderTextLayer={false} renderAnnotationLayer={false} renderMode={'svg'} className='border border-black' loading={<LoadingSpinner />} />
                     </Document>
                 </div>
                 <button className="bg-slate-700 text-white p-2 rounded-md mt-4 ">
-                    <Link href={'/Resume December 2022.pdf'} download target="_blank" rel="noopener noreferrer" className="flex items-center">
+                    <Link href={resumePath} download target="_blank" rel="noopener noreferrer" className="flex items-center">
                         <FiDownload />
                         <p className="ml-2 text-lg">Download Resume</p>
                     </Link>
