@@ -24,7 +24,7 @@ export default function Resume() {
         setNumPages(nextNumPages);
     }
 
-    const resumePath = '/final.pdf';
+    const resumePath = '/Richard Li Resume June.pdf';
 
     return (
         <>
