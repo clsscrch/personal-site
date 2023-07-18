@@ -4,14 +4,16 @@ import PixelMe from '../images/pixel_me.png';
 ---
 
 <Layout title="Hi, I'm Richard Li">
-	<main class="">
+	<main class="md:mx-32">
 		<nav class="flex justify-between p-8">
 			<div>
-				<img 
-					src={PixelMe}
-					alt="Pixel art of myself"
-					class="w-8 h-8"
-				/>
+				<a href="/">
+					<img 
+						src={PixelMe}
+						alt="Pixel art of myself, Richard Li"
+						class="w-8 h-8"
+					/>
+				</a>
 			</div>
 
 			<div class="md:flex gap-4 hidden">
@@ -23,14 +25,21 @@ import PixelMe from '../images/pixel_me.png';
 			</div>
 
 		</nav>
-		<header class="p-8 flex flex-col gap-4">
-			<h3 class="text-xl text-gray-300">Hey there! 👋</h3>
-			<h1 class="text-5xl">I'm 
+		<header class="p-8 flex flex-col gap-4 ">
+			<h3 class="text-xl text-gray-300 tall:text-2xl lg:text-3xl">Hey there! 👋</h3>
+			<h1 class="text-5xl tall:text-6xl lg:text-7xl">I'm 
 				<span class="bg-gradient-to-r bg-clip-text text-transparent from-sky-600 via-teal-500 to-teal-600 font-bold whitespace-nowrap">
 					Richard Li
 				</span>
 			</h1>
-			<h2 class="text-2xl text-gray-300">I'm a software engineer, web developer, and a life long learner</h2>
+			<h2 class="text-2xl text-gray-300 tall:text-3xl">I'm a software engineer, web developer, and a life long learner</h2>
+
+			<h4 class="text-xl text-gray-400 pt-4">
+				I love building websites, apps, and everything in between. My goal is to become a swiss army knife of software engineering,
+				being a versatile developer who can tackle any problem.
+			</h4>
+			
+
 		</header>
 	</main>
 </Layout>
