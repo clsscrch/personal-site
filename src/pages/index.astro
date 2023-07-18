@@ -1,0 +1,37 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PixelMe from '../images/pixel_me.png';
+---
+
+<Layout title="Hi, I'm Richard Li">
+	<main class="">
+		<nav class="flex justify-between p-8">
+			<div>
+				<img 
+					src={PixelMe}
+					alt="Pixel art of myself"
+					class="w-8 h-8"
+				/>
+			</div>
+
+			<div class="md:flex gap-4 hidden">
+				<a href="/">Home</a>
+				<a href="/about">About</a>
+				<a href="/blog">Blog</a>
+				<a href="/projects">Projects</a>
+				<a href="/contact">Contact</a>
+			</div>
+
+		</nav>
+		<header class="p-8 flex flex-col gap-4">
+			<h3 class="text-xl text-gray-300">Hey there! 👋</h3>
+			<h1 class="text-5xl">I'm 
+				<span class="bg-gradient-to-r bg-clip-text text-transparent from-sky-600 via-teal-500 to-teal-600 font-bold whitespace-nowrap">
+					Richard Li
+				</span>
+			</h1>
+			<h2 class="text-2xl text-gray-300">I'm a software engineer, web developer, and a life long learner</h2>
+		</header>
+	</main>
+</Layout>
+
