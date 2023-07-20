@@ -12,7 +12,7 @@ const IconList = () => {
         {
             icon: <SiLinkedin size={"2em"} />,
             url: 'https://linkedin.com',
-            hoverText: 'Connect with me on LinkedIn!'
+            hoverText: 'Connect on LinkedIn!'
         },
         {
             icon: <SiGithub size={"2em"} />,
