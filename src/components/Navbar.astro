@@ -1,0 +1,52 @@
+---
+import PixelMe from '../images/pixel_me.png';
+import Button from '../components/Button.astro';
+
+
+const navLinks = [
+    {
+        name: 'Home',
+        link: '/',
+    },
+    {
+        name: 'About',
+        link: '/about',
+    },
+    {
+        name: 'Projects',
+        link: '/projects',
+    },
+    {
+        name: 'Blog',
+        link: '/blog',
+    },
+
+];
+
+---
+
+<nav class="flex justify-between p-8  items-center align-middle">
+    <div>
+        <a href="/">
+            <img 
+                src={PixelMe}
+                alt="Pixel art of myself, Richard Li"
+                class="w-8 h-8"
+            />
+        </a>
+    </div>
+
+    <div class="md:flex gap-8  items-center align-middle hidden bg-gradient-to-br from-sky-600 via-purple-500 to-teal-500 bg-clip-text">
+        {navLinks.map((link, index) => (
+            <a 
+                href={link.link}
+            >
+                <span class="font-bold text-transparent">{index + 1}.</span> {link.name}
+            </a>
+        ))}
+        <Button>
+            Resume
+        </Button>
+    </div>
+
+</nav>

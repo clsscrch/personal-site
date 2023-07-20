@@ -1,36 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import PixelMe from '../images/pixel_me.png';
 import Button from '../components/Button.astro';
 import IconList from  '../components/IconList.jsx';
 ---
 
-<Layout title="Hi, I'm Richard Li">
-	<main class="md:mx-32 ">
-		<nav class="flex justify-between p-8">
-			<div>
-				<a href="/">
-					<img 
-						src={PixelMe}
-						alt="Pixel art of myself, Richard Li"
-						class="w-8 h-8"
-					/>
-				</a>
-			</div>
-
-			<div class="md:flex gap-4 hidden">
-				<a href="/">Home</a>
-				<a href="/about">About</a>
-				<a href="/blog">Blog</a>
-				<a href="/projects">Projects</a>
-				<a href="/contact">Contact</a>
-			</div>
-
-		</nav>
+<Layout 
+	title="Hi, I'm Richard Li"
+	description="Hey! I'm Richard. A software engineer, web developer, and everything in between. I'm a recent grad from Drexel University with a B.S. Computer Science looking for new opportunities."
+>
 		<header class="px-8 py-0  md:p-8 flex flex-col gap-4">
-			<h3 class="text-xl text-gray-300  lg:text-3xl 3xl:text-5xl ">Hey there! 👋</h3>
+			<h3 class="text-xl text-gray-300  lg:text-3xl 3xl:text-5xl ">Hey there! 👋🏼</h3>
 			<h1 class="text-5xl lg:text-7xl 3xl:text-9xl  ">I'm 
-				<span class="bg-gradient-to-r bg-clip-text text-transparent from-sky-600 via-teal-500 to-teal-600 font-bold whitespace-nowrap">
+				<span class="bg-gradient-to-r  from-sky-600 via-teal-500 to-teal-600 bg-clip-text text-transparent font-bold whitespace-nowrap">
 					Richard Li
 				</span>
 			</h1>
@@ -41,13 +22,11 @@ import IconList from  '../components/IconList.jsx';
 				being a versatile developer who can tackle any problem.
 			</h4>
 
-			<!-- Icon Section -->
 			<div class="py-8">
 				<IconList />
 			</div>
 
 		</header>
-
 		
 	</main>
 </Layout>
