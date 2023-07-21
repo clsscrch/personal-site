@@ -1,6 +1,6 @@
 ---
 import PixelMe from '../images/pixel_me.png';
-import Button from '../components/Button.astro';
+import ButtonLink from './ButtonLink.astro';
 
 
 const navLinks = [
@@ -44,9 +44,10 @@ const navLinks = [
                 <span class="font-bold text-transparent">{index + 1}.</span> {link.name}
             </a>
         ))}
-        <Button>
-            Resume
-        </Button>
+        <ButtonLink href="/resume">
+                Resume
+        </ButtonLink>
+
     </div>
 
 </nav>
