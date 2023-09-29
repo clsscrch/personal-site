@@ -1,10 +1,11 @@
 ---
 interface Props {
 	title: string;
+    pageTitle: string;
 	description?: string;
 }
 
-const { title, description } = Astro.props;
+const { title, pageTitle, description } = Astro.props;
 import Navbar from '../components/Navbar.astro';
 ---
 
@@ -18,13 +19,16 @@ import Navbar from '../components/Navbar.astro';
 		<link rel="apple-touch-icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-		<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 	</head>
 	<body class="bg-slate-900 text-gray-100 min-h-screen ">
 		<main class="md:mx-32 ">
 			<Navbar />
-			<slot />
+            <section class="px-8 py-0  md:p-8 flex flex-col gap-4">
+                <h3 class="flex text-xl items-center whitespace-nowrap text-gray-300  lg:text-3xl 3xl:text-5xl after:w-1/2 after:bg-gray-700 after:block after:h-[1px] after:ml-8">{pageTitle}</h3>
+			    <slot />
+            </section>
 		</main>
 	</body>
 </html>
+
 

@@ -1,0 +1,19 @@
+---
+interface Props {
+  title: string;
+  link?: string;
+  github?: string;
+  colSpan?: number;
+  rowSpan?: number;
+}
+
+const {title, colSpan, rowSpan} = Astro.props;
+
+---
+
+<div class:list={[ colSpan ? `col-span-${colSpan}` : "col-span-1", rowSpan ? `row-span-${rowSpan}` :  "row-span-1", "border", "p-4", "rounded-lg" ]}>
+    <h2 class="text-xl  after:block after:bg-white after:h-[1px] after:mr-4 after:mt-1 after:w-2/3">{title}</h2>
+    <p>
+        <slot />
+    </p>
+</div>

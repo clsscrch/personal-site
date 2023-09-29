@@ -1,10 +1,28 @@
 ---
-import Layout from '../layouts/Layout.astro'
+import Project from "../components/Project.astro";
+import ProjectTwo from "../components/ProjectTwo.astro";
+import TitledPage from "../layouts/TitledPage.astro";
 ---
 
-<Layout 
+<TitledPage 
     title="My Projects"
+    pageTitle="Projects"
     description="A collection of my projects"
 >
+    <section class="grid gap-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
+        <Project 
+            title="Indeed Job Data Analyzer"
+        >
+            A web application that scrapes Indeed.com and produces data visualizations of the job market. 
+        </Project>
+
+        <ProjectTwo
+            title="Covid-19 Data Visualizer"
+        >
+            A web application that scrapes data from the CDC and produces data visualizations of the Covid-19 pandemic.
+        </ProjectTwo>
+
+    </section>
     
-</Layout>
+</TitledPage>
+

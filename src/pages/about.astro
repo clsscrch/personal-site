@@ -1,15 +1,14 @@
 ---
-import Layout from '../layouts/Layout.astro'
+import TitledPage from '../layouts/TitledPage.astro'
 import Paragraph from '../components/Paragraph.astro';
 import ButtonLink from '../components/ButtonLink.astro';
 ---
 
-<Layout 
+<TitledPage  
     title="About Me"
+    pageTitle="About Me"
     description="About me page"
 >
-    <section class="px-8 py-0  md:p-8 flex flex-col gap-4">
-        <h3 class="flex text-xl items-center whitespace-nowrap text-gray-300  lg:text-3xl 3xl:text-5xl after:w-1/2 after:bg-gray-700 after:block after:h-[1px] after:ml-8">About Me</h3>
         <Paragraph>
             Hey! I'm Richard, a software engineer based in <span class="text-sky-400 font-semibold">Philadelphia, PA</span>.
         </Paragraph>
@@ -19,14 +18,9 @@ import ButtonLink from '../components/ButtonLink.astro';
             I am a lifelong learner and I am always looking to learn new things and improve my skills. 
             I am currently looking for a full time position as a web developer. 
         </Paragraph>
-        <div>
+        <div class="mt-4">
             <ButtonLink>
                 Let's Connect
             </ButtonLink>
         </div>
-
-
-
-    </section>
-    
-</Layout>
+</TitledPage>
