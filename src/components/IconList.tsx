@@ -28,7 +28,7 @@ const IconList = () => {
     ]
 
     return (
-        <div className='flex gap-12'>
+        <div className='flex gap-12 flex-col sm:flex-row'>
             {links.map((link: Icon, index) => {
                 return (
                     <div key={index} className="group flex flex-col items-center justify-center gap-8 text-gray-400 hover:text-sky-400 relative">
