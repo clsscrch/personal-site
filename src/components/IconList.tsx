@@ -9,33 +9,32 @@ type IconType = {
 }
 
 const IconList = () => {
-    // const links = [
-    //     {
-    //         icon: <Icon name="mdi:linkedin" />,
-    //         url: 'https://linkedin.com',
-    //         hoverText: 'Connect on LinkedIn!'
-    //     }
-    //     // {
-    //     //     icon: <SiLinkedin size={"2em"} />,
-    //     //     url: 'https://linkedin.com',
-    //     //     hoverText: 'Connect on LinkedIn!'
-    //     // },
-    //     // {
-    //     //     icon: <SiGithub size={"2em"} />,
-    //     //     url: 'https://github.com',
-    //     //     hoverText: 'Check out my GitHub!'
-    //     // },
-    //     // {
-    //     //     icon: <HiMail size={"2em"} />,
-    //     //     url: 'mailto:',
-    //     //     hoverText: 'Send me an email!'
-    //     // }
-    // ]
+    const links = [
+        {
+            icon: <Icon icon="mdi:linkedin" width="48" height="48" />,
+            url: 'https://linkedin.com',
+            hoverText: 'Connect on LinkedIn!'
+        }
+        // {
+        //     icon: <SiLinkedin size={"2em"} />,
+        //     url: 'https://linkedin.com',
+        //     hoverText: 'Connect on LinkedIn!'
+        // },
+        // {
+        //     icon: <SiGithub size={"2em"} />,
+        //     url: 'https://github.com',
+        //     hoverText: 'Check out my GitHub!'
+        // },
+        // {
+        //     icon: <HiMail size={"2em"} />,
+        //     url: 'mailto:',
+        //     hoverText: 'Send me an email!'
+        // }
+    ]
 
     return (
         <div className='flex gap-12'>
-            <Icon icon="mdi:linkedin" />
-            {/* {links.map((link: Icon, index) => {
+            {links.map((link: Icon, index) => {
                 return (
                     <div key={index} className="group flex flex-col items-center justify-center gap-8 text-gray-400 hover:text-sky-400 relative">
                         <span className="transition-all duration-500 scale-0 group-hover:scale-100 absolute bg-gray-600 text-sm whitespace-nowrap text-white p-2 rounded-md -top-12">
@@ -46,7 +45,7 @@ const IconList = () => {
                         </a>
                     </div>
                 )
-            })} */}
+            })}
         </div>
     )
 }
