@@ -14,22 +14,17 @@ const IconList = () => {
             icon: <Icon icon="mdi:linkedin" width="48" height="48" />,
             url: 'https://linkedin.com',
             hoverText: 'Connect on LinkedIn!'
+        },
+        {
+            icon: <Icon icon="mdi:github" width="48" height="48" />,
+            url: 'https://github.com',
+            hoverText: 'Check out my GitHub!'
+        },
+        {
+            icon: <Icon icon="ion:mail" width="48" height="48" />,
+            url: 'mailto:',
+            hoverText: 'Send me an email!'
         }
-        // {
-        //     icon: <SiLinkedin size={"2em"} />,
-        //     url: 'https://linkedin.com',
-        //     hoverText: 'Connect on LinkedIn!'
-        // },
-        // {
-        //     icon: <SiGithub size={"2em"} />,
-        //     url: 'https://github.com',
-        //     hoverText: 'Check out my GitHub!'
-        // },
-        // {
-        //     icon: <HiMail size={"2em"} />,
-        //     url: 'mailto:',
-        //     hoverText: 'Send me an email!'
-        // }
     ]
 
     return (
