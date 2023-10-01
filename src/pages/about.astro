@@ -1,0 +1,26 @@
+---
+import TitledPage from '../layouts/TitledPage.astro'
+import Paragraph from '../components/Paragraph.astro';
+import ButtonLink from '../components/ButtonLink.astro';
+---
+
+<TitledPage  
+    title="About Me"
+    pageTitle="About Me"
+    description="About me page"
+>
+        <Paragraph>
+            Hey! I'm Richard, a software engineer based in <span class="text-sky-400 font-semibold">Philadelphia, PA</span>.
+        </Paragraph>
+        <Paragraph>
+            I am a full stack web developer with driven by my passion for creating beautiful, accessible, and user friendly websites. 
+            I have experience with HTML, CSS, JavaScript, React, Node, Express, and MongoDB.
+            I am a lifelong learner and I am always looking to learn new things and improve my skills. 
+            I am currently looking for a full time position as a web developer. 
+        </Paragraph>
+        <div class="mt-4">
+            <ButtonLink>
+                Let's Connect
+            </ButtonLink>
+        </div>
+</TitledPage>

@@ -1,0 +1,34 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/ButtonLink.astro';
+import IconList from  '../components/IconList.jsx';
+import { Icon } from "astro-icon"
+---
+
+<Layout 
+	title="Hi, I'm Richard Li"
+	description="Hey! I'm Richard. A software engineer, web developer, and everything in between. I'm a recent grad from Drexel University with a B.S. Computer Science looking for new opportunities."
+>
+		<header class="px-8 py-0  md:p-8 flex flex-col gap-4">
+			<h3 class="text-xl text-gray-300  lg:text-3xl 3xl:text-5xl ">Hey there! 👋🏼</h3>
+			<h1 class="text-5xl lg:text-7xl 3xl:text-9xl  ">I'm 
+				<span class="bg-gradient-to-r  from-sky-600 via-teal-500 to-teal-600 bg-clip-text text-transparent font-bold whitespace-nowrap">
+					Richard Li
+				</span>
+			</h1>
+			<h2 class="text-2xl text-gray-300  3xl:text-4xl ">I'm a software engineer, web developer, and a life long learner</h2>
+
+			<h4 class="text-xl text-gray-400 pt-4 md:max-w-3xl 3xl:text-2xl">
+				I love building websites, apps, and everything in between. My goal is to become a swiss army knife of software engineering,
+				being a versatile developer who can tackle any problem.
+			</h4>
+
+			<div class="py-8 w-full flex justify-center md:justify-normal">
+				<IconList />
+			</div>
+
+		</header>
+		
+	</main>
+</Layout>
+
