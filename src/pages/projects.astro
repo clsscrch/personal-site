@@ -1,7 +1,37 @@
 ---
 import Project from "../components/Project.astro";
-import ProjectTwo from "../components/ProjectTwo.astro";
 import TitledPage from "../layouts/TitledPage.astro";
+
+
+type Project = {
+    title: string;
+    description: string;
+    link?: string;
+    github?: string;
+}
+const PROJECTS: Project[] = [
+
+    {
+        title: "JobMapr",
+        description: "A web application that scrapes job data from Indeed.com and produces data visualizations of the job market. Built for my senior capstone project at the Drexel University.",
+        link: "https://main.d36ehc232kefwn.amplifyapp.com/",
+    },
+    {
+        title: "Owner Community",
+        description: "A CMS that allows homeowners within a community to manage their properties. Built during my time as a software engineer at The Educational Commission for Foreign Medical Graduates.",
+        github: "https://github.com/simnova/ownercommunity-ui",
+    },
+    {
+        title: "Avent's Website",
+        description: "A landing page for a mobile app, Avent. Fully designed and developed by me.",
+        link: "https://aventonline.com",
+    },
+    {
+        title: "Asia Niemiec's Website",
+        description: "A portfolio website for artist Asia Niemiec. Fully integrated with a self managed CMS, allowing her to add portfolio projects through an admin dashboard.",
+        link: "https://asianiemiec.art",
+    }
+];
 ---
 
 <TitledPage 
@@ -9,18 +39,16 @@ import TitledPage from "../layouts/TitledPage.astro";
     pageTitle="Projects"
     description="A collection of my projects"
 >
-    <section class="grid gap-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
-        <Project 
-            title="Indeed Job Data Analyzer"
-        >
-            A web application that scrapes Indeed.com and produces data visualizations of the job market. 
-        </Project>
+    <section class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
 
-        <ProjectTwo
-            title="Covid-19 Data Visualizer"
-        >
-            A web application that scrapes data from the CDC and produces data visualizations of the Covid-19 pandemic.
-        </ProjectTwo>
+
+        {PROJECTS.map((project) => {
+            return (
+                <Project title={project.title} github={project?.github} link={project?.link}>
+                    {project.description}
+                </Project>
+            )
+        })}
 
     </section>
     

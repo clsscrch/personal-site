@@ -29,7 +29,7 @@ const IconList = () => {
 
     return (
         <div className='flex gap-12 flex-col sm:flex-row'>
-            {links.map((link: Icon, index) => {
+            {links.map((link: IconType, index) => {
                 return (
                     <div key={index} className="group flex flex-col items-center justify-center gap-8 text-gray-400 hover:text-sky-400 relative">
                         <span className="transition-all duration-500 scale-0 group-hover:scale-100 absolute bg-gray-600 text-sm whitespace-nowrap text-white p-2 rounded-md -top-12">
