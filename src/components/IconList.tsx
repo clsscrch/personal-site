@@ -12,17 +12,17 @@ const IconList = () => {
     const links = [
         {
             icon: <Icon icon="mdi:linkedin" width="48" height="48" />,
-            url: 'https://linkedin.com',
+            url: 'https://www.linkedin.com/in/richardli-tech/',
             hoverText: 'Connect on LinkedIn!'
         },
         {
             icon: <Icon icon="mdi:github" width="48" height="48" />,
-            url: 'https://github.com',
+            url: 'https://github.com/clsscrch',
             hoverText: 'Check out my GitHub!'
         },
         {
             icon: <Icon icon="ion:mail" width="48" height="48" />,
-            url: 'mailto:',
+            url: 'mailto:rl628@drexel.edu',
             hoverText: 'Send me an email!'
         }
     ]
