@@ -25,7 +25,12 @@ export default defineConfig({
         label: "Posts",
         path: "src/pages/blog",
         defaultItem: () => {
-          return { postedAt: new Date()}
+          return { postedAt: new Date(), layout: "../../layouts/PostLayout.astro"}
+        },
+        ui: {
+          filename: {
+            readonly: true,
+          }
         },
         fields: [
           {
@@ -33,6 +38,12 @@ export default defineConfig({
             name: "title",
             label: "Title",
             isTitle: true,
+            required: true,
+          },
+          {
+            type: "string",
+            name: "description",
+            label: "Description",
             required: true,
           },
           {
@@ -46,6 +57,16 @@ export default defineConfig({
             name: "postedAt",
             label: "Posted at",
             required: true,
+          },
+          {
+            type: "string",
+            name: "layout",
+            label: "Layout",
+            options: [
+              {label: "Blog Post", value: "../../layouts/PostLayout.astro"},
+            ],
+            required: true,
+
           }
         ],
       },

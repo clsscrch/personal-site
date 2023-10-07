@@ -1,0 +1,10 @@
+---
+const { title, link, body } = Astro.props
+---
+
+<a href={link}>
+    <div class="bg-[#1a3153] p-4 rounded-md transition-all hover:-translate-y-2 focus:-translate-y-2 " tabindex="0">
+        <h2 class="text-2xl pb-2">{title}</h2>
+        <slot />
+    </div>
+</a>
