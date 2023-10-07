@@ -23,7 +23,10 @@ export default defineConfig({
       {
         name: "post",
         label: "Posts",
-        path: "content/posts",
+        path: "src/pages/blog",
+        defaultItem: () => {
+          return { postedAt: new Date()}
+        },
         fields: [
           {
             type: "string",
@@ -38,6 +41,12 @@ export default defineConfig({
             label: "Body",
             isBody: true,
           },
+          {
+            type: "datetime",
+            name: "postedAt",
+            label: "Posted at",
+            required: true,
+          }
         ],
       },
     ],
