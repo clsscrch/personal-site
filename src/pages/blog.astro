@@ -1,5 +1,23 @@
 ---
 import TitledPage from '../layouts/TitledPage.astro';
+import BlogPost from '../components/BlogPost.astro';
+import { client } from '../../tina/__generated__/client';
+
+// const post = await client.queries.post( { relativePath: "a.md" } )
+// console.log(post)
+
+const postsResponse = await client.queries.postConnection()
+console.log(postsResponse?.data?.postConnection?.edges)
+const posts = postsResponse?.data?.postConnection?.edges?.map((post) => {
+    
+    return { 
+        slug: post?.node?._sys.filename, 
+        title: post?.node?.title, 
+        description: post?.node?.description,
+        postedAt: post?.node?.postedAt,
+    }
+})
+
 ---
 
 <TitledPage 
@@ -8,6 +26,11 @@ import TitledPage from '../layouts/TitledPage.astro';
     pageTitle="My Blog"
 >
     <section class="grid">
+        {posts?.map((post) => (
+            <BlogPost link={`/blog/${post.slug}`} title={post.title}>
+                {post.description}
+            </BlogPost>
+        ))}
 
     </section>
     
