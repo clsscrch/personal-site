@@ -1,5 +1,7 @@
 ---
 import Navbar from "../components/Navbar.astro";
+import '../styles/PostPage.css'
+
 const { frontmatter } = Astro.props;
 
 ---
@@ -15,11 +17,17 @@ const { frontmatter } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{frontmatter.title}</title>
 		<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+        <style>
+        </style>
 	</head>
 	<body class="bg-slate-900 text-gray-100 min-h-screen ">
 		<main class="md:mx-32 ">
 			<Navbar />
-			<slot />
+            <article class="px-8 pt-4 flex flex-col gap-2">
+                <h1 class="font-bold" id="title">{frontmatter.title}</h1>
+                <slot />
+            </article>
 		</main>
 	</body>
 </html>
+

@@ -25,9 +25,9 @@ const posts = postsResponse?.data?.postConnection?.edges?.map((post) => {
     description="Richard's Blog"
     pageTitle="My Blog"
 >
-    <section class="grid">
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-4">
         {posts?.map((post) => (
-            <BlogPost link={`/blog/${post.slug}`} title={post.title}>
+            <BlogPost link={`/blog/${post.slug}`} title={post.title} datetime={post.postedAt}>
                 {post.description}
             </BlogPost>
         ))}
